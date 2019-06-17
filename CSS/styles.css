@@ -1,0 +1,180 @@
+/* Color Palette
+
+#EED16B  - groc
+#DD5D3C  - taronja
+#5D2531  - marro vermellós
+#e8e9eb  - gris molt clar
+#rgb(243, 233, 198)  - groc molt clar
+
+#173f5f  - blau
+
+
+#5D2531 
+#E1F4F4
+*/
+
+
+/* Global styles 
+------------------------------------*/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+   font-family: 'Open Sans', sans-serif;
+   margin: 0;
+}
+h1, h2 {
+    font-family: 'Caveat', cursive;
+    font-weight: 400; /* treure bold per defecte*/
+}
+h1{
+    font-size: 60px;
+}
+h2 {
+    font-size: 40px;
+    margin-top: 0;
+}
+h3 {
+    margin: 0;
+}
+a {
+    color: #ef5856;
+}
+a:hover{
+    text-decoration: none;
+}
+.content-wrap{
+    max-width: 950px;  /* si>=950 centrara sinó adaptarà pantalla */
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden; 
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+.btn {
+    text-decoration: none;
+    background: #DD5D3C;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+}
+
+
+
+/* Header & Footer 
+------------------------------------*/
+header, footer {
+    background: #EED16B;
+    color: #5D2531;
+}
+/*Header*/
+header {
+    position: relative;
+}
+header h1, header h2 {
+    color: #5D2531;
+    margin: 0;
+}
+.profile-img {    
+    border-radius: 50%;    
+}
+.download {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* Navigation
+------------------------------------*/
+nav{
+    text-align: center;
+}
+nav a,
+.gotop a {
+    display: inline-block;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+/*Footer*/
+footer {
+    text-align: center;
+}
+.contact-info a {
+    padding: 10px;
+    display: inline-block;  /* per evitar que el padding tapi el contingut del voltant*/
+}
+
+
+/* Work Experience
+------------------------------------*/
+.work{
+    background: rgb(243, 233, 198);
+}
+h3 ~ p {
+    margin: 0;
+}
+.job-description {
+    margin-bottom: 20px;
+}
+.job-description ul:first-of-type {
+    margin-top: 0;
+}
+.gotop {   
+    position: fixed;
+    right: 10px;
+    top: 0px;
+}
+
+/* Education
+------------------------------------*/
+.education{
+    background: #e8e9eb; 
+}
+p + h3 {
+    margin-top: 30px;
+}
+
+/* altres  slide
+------------------------------------*/
+.coneixements {
+    /* sets gradient and image */
+    background: linear-gradient(rgba(255, 255, 255, 0.5),
+                 rgba(238, 209, 107, 0.8)),
+                 url(../images/fonsglobus.png) no-repeat fixed; 
+    background-size: cover;
+}                 
+
+
+/* Media Queries
+------------------------------------*/
+@media (min-width: 900px) {
+    .col-narrow {
+        width: 30%;
+        float: left;
+        min-height: 110px;
+    }
+    .col-wide {
+        width: 70%;
+        float: left;
+        padding-left: 20px;
+        min-height: 110px;
+    }
+}
+@media (max-width: 899px){
+    header {
+        text-align: center;
+    }
+    .profile-img {
+        width: 200px;
+    }
+}
